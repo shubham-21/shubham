@@ -395,16 +395,14 @@ img {
 .parallax-main {
   position: relative;
   z-index: 2;
-  background: transparent;
+  background: var(--bg-primary);
 }
 
 .parallax-section {
   position: relative;
-  overflow: hidden;
   border-radius: var(--section-radius) var(--section-radius) 0 0;
-  box-shadow: 0 -24px 56px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 -20px 48px rgba(15, 23, 42, 0.07);
   background: var(--bg-primary);
-  will-change: transform;
 }
 
 .parallax-section.bg-section {
@@ -450,7 +448,6 @@ img {
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
-  will-change: transform;
 }
 
 .parallax-shape-1 {
@@ -477,8 +474,28 @@ img {
   background: radial-gradient(circle, rgba(37, 99, 235, 0.07) 0%, transparent 72%);
 }
 
-[data-parallax-speed] {
-  will-change: transform;
+.parallax-shape-4 {
+  width: 320px;
+  height: 320px;
+  bottom: 10%;
+  right: -90px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.09) 0%, transparent 70%);
+}
+
+.parallax-shape-5 {
+  width: 300px;
+  height: 300px;
+  top: 15%;
+  left: -70px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.09) 0%, transparent 70%);
+}
+
+.parallax-shape-6 {
+  width: 380px;
+  height: 380px;
+  bottom: 8%;
+  right: -110px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 72%);
 }
 
 /* ============================================
@@ -1144,9 +1161,14 @@ img {
   background: var(--bg-secondary);
   border-top: none;
   border-radius: var(--section-radius) var(--section-radius) 0 0;
-  box-shadow: 0 -24px 56px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 -20px 48px rgba(15, 23, 42, 0.07);
   margin-top: calc(var(--section-overlap) * -1);
   padding: calc(2rem + var(--section-overlap) - 1rem) 0 2rem;
+}
+
+.footer > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .footer::before {
@@ -1281,8 +1303,7 @@ img {
   .hero-network-canvas,
   .hero-bg,
   .hero-overlay,
-  .hero-content,
-  .parallax-section {
+  .hero-content {
     transform: none !important;
   }
 }
